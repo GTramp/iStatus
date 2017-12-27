@@ -12,6 +12,7 @@
 		2F31116C1FF3710100AA2182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F31116A1FF3710100AA2182 /* Main.storyboard */; };
 		2F31116E1FF3710100AA2182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F31116D1FF3710100AA2182 /* Assets.xcassets */; };
 		2F3111711FF3710100AA2182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F31116F1FF3710100AA2182 /* LaunchScreen.storyboard */; };
+		37D8E519087746124309CDF5 /* Pods_iStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45973183B23F498AB5AD1BAF /* Pods_iStatus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		2F31116D1FF3710100AA2182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F3111701FF3710100AA2182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F3111721FF3710100AA2182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45973183B23F498AB5AD1BAF /* Pods_iStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A334D3EC8A841ECB9F284BDB /* Pods-iStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-iStatus/Pods-iStatus.release.xcconfig"; sourceTree = "<group>"; };
+		E3B321992135064097282448 /* Pods-iStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iStatus/Pods-iStatus.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D8E519087746124309CDF5 /* Pods_iStatus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1346CB3522812EC41B9AAB96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3B321992135064097282448 /* Pods-iStatus.debug.xcconfig */,
+				A334D3EC8A841ECB9F284BDB /* Pods-iStatus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2F31115A1FF3710000AA2182 = {
 			isa = PBXGroup;
 			children = (
 				2F3111651FF3710100AA2182 /* iStatus */,
 				2F3111641FF3710000AA2182 /* Products */,
+				1346CB3522812EC41B9AAB96 /* Pods */,
+				5323AC169E9FC84FF5743C38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = iStatus;
 			sourceTree = "<group>";
 		};
+		5323AC169E9FC84FF5743C38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45973183B23F498AB5AD1BAF /* Pods_iStatus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F3111751FF3710100AA2182 /* Build configuration list for PBXNativeTarget "iStatus" */;
 			buildPhases = (
+				04A98E8CC978A8D3AA1C4CBA /* [CP] Check Pods Manifest.lock */,
 				2F31115F1FF3710000AA2182 /* Sources */,
 				2F3111601FF3710000AA2182 /* Frameworks */,
 				2F3111611FF3710000AA2182 /* Resources */,
+				2022E0C93CC8F0C1E200BD00 /* [CP] Embed Pods Frameworks */,
+				E1BE5B91BDCB42DE2D771394 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -90,6 +117,7 @@
 		2F31115B1FF3710000AA2182 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IV;
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = iCode;
@@ -130,6 +158,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A98E8CC978A8D3AA1C4CBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iStatus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2022E0C93CC8F0C1E200BD00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iStatus/Pods-iStatus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1BE5B91BDCB42DE2D771394 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iStatus/Pods-iStatus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F31115F1FF3710000AA2182 /* Sources */ = {
@@ -272,31 +351,35 @@
 		};
 		2F3111761FF3710100AA2182 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3B321992135064097282448 /* Pods-iStatus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W77EGW7S3;
 				INFOPLIST_FILE = iStatus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.icode.iStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = iv.icode.iStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2F3111771FF3710100AA2182 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A334D3EC8A841ECB9F284BDB /* Pods-iStatus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W77EGW7S3;
 				INFOPLIST_FILE = iStatus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = io.icode.iStatus;
+				PRODUCT_BUNDLE_IDENTIFIER = iv.icode.iStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
