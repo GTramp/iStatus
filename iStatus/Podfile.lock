@@ -1,3 +1,23 @@
-PODFILE CHECKSUM: 0a293e15941e91120d6b2c1a1218204701493720
+PODS:
+  - Alamofire (4.6.0)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - SnapKit (4.0.0)
+  - SVProgressHUD (2.2.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6.0)
+  - SDWebImage (~> 4.2.2)
+  - SnapKit (~> 4.0.0)
+  - SVProgressHUD (~> 2.2.2)
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+
+PODFILE CHECKSUM: 0affc2fa90870d4e3937dd1316e444b6c55c4aea
 
 COCOAPODS: 1.4.0.rc.1
